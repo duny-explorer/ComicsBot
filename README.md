@@ -1,7 +1,6 @@
-<h1 align="center">ComicsBot</h1>
 <h2 align="center">
 
-</h2>
+</h1> <h1 align="center">ComicsBot</h1>
 
 <p align="center">
 
