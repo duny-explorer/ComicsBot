@@ -50,7 +50,7 @@ The following datasets were used for training:
 - <a href='https://www.kaggle.com/datasets/cenkbircanoglu/comic-books-classification'>Comic Books Images</a>
 - <a href='https://github.com/Sxela/face2comics?ysclid=ljr2nd764h16820479'>face2comics by Sxela (Alex Spirin)</a>
 
-## Project setup
+## Deployment
 
 ```
 git clone https://github.com/duny-explorer/ComicsBot
@@ -62,5 +62,5 @@ python bot main.py
 ```
 
 ## Future scope
-
-- Write the CycleGAN yourself and retrain it
+-[ ] Reatrian CycleGAN
+-[ ] Write the CycleGAN yourself
