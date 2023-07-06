@@ -62,5 +62,5 @@ python bot main.py
 ```
 
 ## Future scope
--[ ] Reatrian CycleGAN
--[ ] Write the CycleGAN yourself
+- [ ] Reatrian CycleGAN
+- [ ] Write the CycleGAN yourself
