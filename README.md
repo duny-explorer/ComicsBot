@@ -29,6 +29,10 @@
 
 This is a telegram bot that will allow anyone to try algorithms for transferring style. In our case Fast Neural Style and CycleGan
 
+<p align="center">
+  <img src="https://github.com/duny-explorer/ComicsBot/assets/37844052/a6799be6-e080-45bd-8051-f1a1fefb361a" alt="animated" />
+</p>
+
 ## Models
 
 - Fast Neural Style
@@ -52,15 +56,22 @@ The following datasets were used for training:
 
 ## Deployment
 
-```
+```bash
 git clone https://github.com/duny-explorer/ComicsBot
 cd ComicsBot
 python -m pip install --user virtualenv
 python -m venv bot
+source bot/bin/activate
 python -m pip install -r requirements.txt
-python bot main.py
+python bot/main.py
 ```
 
-## Future scope
+If there are problems with aiogram:
+
+```bash
+pip install https://github.com/aiogram/aiogram/archive/refs/heads/dev-3.x.zip
+```
+
+## For the future
 - [ ] Reatrian CycleGAN
 - [ ] Write the CycleGAN yourself
