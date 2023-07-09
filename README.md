@@ -72,6 +72,8 @@ If there are problems with aiogram:
 pip install https://github.com/aiogram/aiogram/archive/refs/heads/dev-3.x.zip
 ```
 
+You can also use Dockerfile
+
 ## For the future
 - [ ] Reatrian CycleGAN
 - [ ] Write the CycleGAN yourself
