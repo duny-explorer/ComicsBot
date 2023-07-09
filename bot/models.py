@@ -109,7 +109,6 @@ class ModelFastNeuralStyle:
     def __init__(self):
         self.model = TransformerNet().eval()
         self.model.load_state_dict(torch.load('CNN.pth', map_location=lambda _s, _: _s))
-        self.model = self.model.cuda()
 
     def result(self, image):
         with torch.no_grad():
@@ -119,8 +118,8 @@ class ModelFastNeuralStyle:
                 tv.transforms.Lambda(lambda x: x.mul(255))
             ])
 
-            content_image = content_transform(content_image).unsqueeze(0).cuda().detach()
-            output = self.model(content_image).cpu().data[0]
+            content_image = content_transform(content_image).unsqueeze(0).detach()
+            output = self.model(content_image).data[0]
             tv.utils.save_image((output / 255).clamp(min=0, max=1), image)
 
 
@@ -214,7 +213,6 @@ class CycleGan:
         norm_layer = functools.partial(nn.InstanceNorm2d, affine=False, track_running_stats=False)
         self.model = ResnetGenerator(3, 3, 64, norm_layer=norm_layer, use_dropout=False, n_blocks=9).eval()
         self.model.load_state_dict(torch.load('G_A.pth'))
-        self.model = self.model.cuda()
 
     def result(self, image):
         with torch.no_grad():
@@ -223,6 +221,6 @@ class CycleGan:
                 tv.transforms.ToTensor(),
             ])
 
-            content_image = content_transform(content_image).unsqueeze(0).cuda().detach()
-            output = self.model(content_image).cpu().data[0]
+            content_image = content_transform(content_image).unsqueeze(0).detach()
+            output = self.model(content_image).data[0]
             tv.utils.save_image(output.clamp(min=0, max=1), image)

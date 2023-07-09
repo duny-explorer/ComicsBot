@@ -4,13 +4,13 @@ from aiogram.fsm.storage.memory import MemoryStorage
 
 import asyncio
 import logging
+import os
 
-from bot import config
 from bot.handlers import router
 
 
 async def main():
-    bot = Bot(token=config.BOT_TOKEN, parse_mode=ParseMode.HTML)
+    bot = Bot(token=os.environ.get('API_KEY'), parse_mode=ParseMode.HTML)
     dp = Dispatcher(storage=MemoryStorage())
     dp.include_router(router)
     await bot.delete_webhook(drop_pending_updates=True)
