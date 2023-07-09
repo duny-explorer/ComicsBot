@@ -6,7 +6,7 @@ import asyncio
 import logging
 import os
 
-from bot.handlers import router
+from handlers import router
 
 
 async def main():
