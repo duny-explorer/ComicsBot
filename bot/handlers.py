@@ -27,6 +27,12 @@ async def help_handler(msg: Message):
     await msg.answer(text.text_help)
 
 
+@router.message(Command("transfer_style"))
+async def help_handler(msg: Message, state: FSMContext):
+    await state.set_state(Gen.CNN_prompt)
+    await msg.message.answer(text.gen_image + ". " + text.gen_exit, reply_markup=kb.exit_kb)
+
+
 @router.message(F.text == "Меню")
 @router.message(F.text == "Выйти в меню")
 @router.message(F.text == "◀️ Выйти в меню")
