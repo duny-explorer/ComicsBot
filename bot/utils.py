@@ -1,6 +1,6 @@
 import logging
 
-from bot.models import ModelFastNeuralStyle, CycleGan
+from models import ModelFastNeuralStyle, CycleGan
 
 model_CNN = ModelFastNeuralStyle()
 model_GAN = CycleGan()
