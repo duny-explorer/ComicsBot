@@ -20,7 +20,7 @@
 
 </p>
 
-<img src="https://www.megacitycomics.co.uk/acatalog/avengers-banner.jpg" width="100%">
+<img src="https://cubiq.ru/wp-content/uploads/2024/07/marvel-780x439.jpg" width="100%">
 
 <h2 align="center"><a  href="https://t.me/ConventToComicsBot">Live Demo</a></h2>
 
